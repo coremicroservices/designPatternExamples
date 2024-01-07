@@ -105,13 +105,14 @@ namespace FactoryDesignPattern
     {
         bike = 1,
         car = 2,
-        bus = 3
+        bus = 3,
+        truck = 4
     }
     public class Program
     {
         static void Main(string[] args)
         {
-            IVehicle vehicle = Factory.GetInstance(VehicleType.car);
+            IVehicle vehicle = Factory.GetInstance(VehicleType.truck);
             Console.WriteLine(vehicle.NumberOfWheels() + " : " + vehicle.VehicleType());
             Console.WriteLine("Hello, World!");
         }
